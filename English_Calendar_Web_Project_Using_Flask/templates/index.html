@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Calendar </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    
+        <h1> English <span class="highlight">Calendar</span></h1>
+
+        <form method="POST">
+            <div class="input-group">
+                <label for="year">Enter a Year (2000–3000):</label>
+                <input type="number" name="year" id="year" min="2000" max="3000" placeholder="e.g. 2025" required>
+            </div>
+
+            <div class="input-group">
+                <label for="month">Enter a Month (1-12):</label>
+                <input type="number" name="month" id="month" min="1" max="12" placeholder="e.g. 10" required>
+            </div>
+
+            <button type="submit" class="btn">Show Calendar</button>
+        </form>
+
+        {% if cal_output %}
+        <div class="output-section">
+            <h2>Output:</h2>
+            <div class="code-box">
+                <pre>{{ cal_output }}</pre>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
