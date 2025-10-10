@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎙 <span class="highlight">Speech</span> To <span class="highlight">Text</span> 📑 Converter</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="audio_file">Upload an audio file (mp3 or wav):</label>
+
+            <div class="file-input-wrapper">
+        <input type="file" name="audio_file" id="audio_file" accept=".mp3,.wav" required>
+    </div>
+            <button type="submit">Convert</button>
+        </form>
+
+        {% if text %}
+        <div class="result">
+            <h3><b>Extracted Text 📑</b></u></h3>
+            <p>{{ text }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

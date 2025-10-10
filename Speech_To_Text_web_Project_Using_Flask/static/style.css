@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/image/image1.jpg') no-repeat center center/cover;
+    color: #080807;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(152, 189, 237, 0.515);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(13, 80, 96, 0.2);
+    width: 400px;
+    text-align: center;
+}
+h1 {
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.highlight {
+    color: #ffeb3b; /* bright yellow */
+    font-weight: bold;
+}
+
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    padding: 15px 20px; 
+    background-color: #173d52; 
+    color: rgb(224, 231, 233);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #9a8a30;
+    border: none;
+    padding: 10px 15px;
+    color: rgb(15, 15, 14);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #29e163;
+}
+
+.result {
+    background-color: rgba(237, 235, 217, 0.832);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
