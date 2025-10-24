@@ -1,1 +1,1 @@
-python 50 web project
+python 10 web project
